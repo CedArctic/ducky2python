@@ -9,7 +9,7 @@ print("  __| |_   _  ___| | ___   _|___ \\ _ __  _   _| |_| |__   ___  _ __  ")
 print(" / _` | | | |/ __| |/ / | | | __) | '_ \\| | | | __| '_ \\ / _ \\| '_ \\ ")
 print("| (_| | |_| | (__|   <| |_| |/ __/| |_) | |_| | |_| | | | (_) | | | |")
 print(" \\__,_|\\__,_|\\___|_|\\_\\\\__, |_____| .__/ \\__, |\\__|_| |_|\\___/|_| |_|")
-print("                       |___/      |_|    |___/                       ")
+print("                       |___/      |_|    |___/ \tby CedArctic                 ")
 print("\n\n")
 
 # Load Ducky Script and create Python Output file:
@@ -18,6 +18,7 @@ f = open(duckyScriptPath,"r",encoding='utf-8')
 pythonScript = open("PythonScript.py", "w", encoding='utf-8')
 
 # Write module imports to output file:
+pythonScript.write("# Converted using ducky2python by CedArctic (https://github.com/CedArctic/ducky2python) \n")
 pythonScript.write("import pyautogui\n")
 pythonScript.write("import time\n")
 
