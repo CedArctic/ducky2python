@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>ducky2python: Convert DuckyScript to Python Scripts</title>
+	<meta charset="utf-8">
+	<meta name = "description" content="Convert DuckyScript to Python Scripts">
+	<meta name = "keywords" content="bad usb, rubber ducky, hak5, convert, script, python">
+	<link rel = "stylesheet" type="text/css" href= "css/style.css">
+	<script src="javascript/ducky2python.js"></script>
+
+</head>
+
+<body>
+
+	<div class="navbar">
+		<div class="container">
+			<a href="https://github.com/CedArctic/ducky2python" target="_blank"><h1>ducky2python 🐍</h1></a>
+			<a href="https://github.com/CedArctic" target="_blank"><p>by CedArctic</p></a>
+		</div>
+
+	</div>
+
+
+	<div class = "container about">
+		<p>Convert DuckyScript scripts (of the hak5 USB Rubber Ducky) to Python programs that can run on your computer without a rubber ducky.</p>
+
+		<p>Why DuckyScript and why Python? It's easy! DuckyScript is simple and easy to learn and has become a standard in the BadUSB and pentesting community, Python also is easy to be written and is arguably one of the most portable programming languages available. Combine the two using ducky2python and you have a really easy to learn and powerfull automation tool in your hands!</p>
+	</div>
+
+	<div class = "container">
+		<textarea rows = 15 id = "inputBox" placeholder="Enter DuckyScript to convert..."></textarea>
+		<button onclick="if(document.getElementById('inputBox').value != ''){convert()}">Convert</button>
+		<textarea rows = 15 id = "outputBox" placeholder="Converted Python script will appear here."></textarea>
+	</div>
+
+	<a href="https://github.com/CedArctic/ducky2python" target="_blank"><img src = "https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" alt="Github Icon"></a>
+</body>
+
+</html>
