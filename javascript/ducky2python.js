@@ -75,8 +75,7 @@ function convert(){
 		}else if (duckyScript[line].slice(0,6) == "STRING") {
 			previousStatement = "pyautogui.typewrite(\"" + duckyScript[line].slice(7) + "\", interval=0.02)";
 		}else if (duckyScript[line].slice(0,6) == "REPEAT"){
-			document.write("YEAH");
-			for (i in parseInt(duckyScript[line].slice(7) - 1)){
+			for (i = 0; i < (parseInt(duckyScript[line].slice(7)) - 1); i++){
 				pythonScript += previousStatement;
 				pythonScript += "\n";
 
