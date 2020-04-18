@@ -73,7 +73,7 @@ for line in duckyScript:
 	# Check if the statement is a repeat command - in which case write the previous command times-1 since
 	# we write it once more at the end of the for loop anyways
 	elif line[0:6] == "REPEAT" :
-		for i in int(line[7:0] - 1):
+		for i in range(int(line[7:]) - 1):
 			pythonScript.write(previousStatement)
 			pythonScript.write("\n")
 	
