@@ -57,6 +57,10 @@ pyautoguiCommands = ["win", "win", "optionleft", "optionleft", "shift", "alt", "
 	
 # Process each line from the Ducky Script:
 for line in duckyScript:
+
+	# Skip whitespace (empty) lines
+	if line.strip() == "": 
+		continue
 	
 	# Check if the statement is a comment
 	if line[0:3] == "REM" :
