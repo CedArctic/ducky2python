@@ -73,8 +73,8 @@ function convert(){
 		}else if (duckyScript[line].slice(0,5) == "DELAY"){
 			previousStatement = "time.sleep(" + (parseFloat(duckyScript[line].slice(6)) / 1000) + ")";
 		}else if (duckyScript[line].slice(0,6) == "STRING") {
-			escapedDoubleQuotes = duckyScript[line].slice(7).replace(/"/g, '\\"');
-			previousStatement = "pyautogui.typewrite(\"" + escapedDoubleQuotes + "\", interval=0.02)";
+			escapeDoubleQuotes = duckyScript[line].slice(7).replace(/"/g, '\\"');
+			previousStatement = "pyautogui.typewrite(\"" + escapeDoubleQuotes + "\", interval=0.02)";
 		}else if (duckyScript[line].slice(0,6) == "REPEAT"){
 			var repetitions = parseInt(duckyScript[line].slice(7)) - 1;
 			for (i = 0; i < repetitions; i++){
