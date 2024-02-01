@@ -67,6 +67,11 @@ function convert(){
 	// Process each line from the Ducky Script:
 	for (line = 0; line < duckyScript.length; line++){
 
+		// Skip over empty lines
+		if (duckyScript[line].trim() === "") {
+			continue;
+		}
+
 		// Check if the statement is a comment
 		if(duckyScript[line].slice(0,3) == "REM"){
 			previousStatement = duckyScript[line].replace("REM","#");
