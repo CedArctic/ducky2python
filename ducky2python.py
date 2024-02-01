@@ -99,4 +99,4 @@ for line in duckyScript:
 
 # Close output file before exiting
 pythonScript.close()	
-input("\nConversion complete!\n\nPress any key to close.")
+input("\nConversion complete!\n\nPress the enter/return key to close.")
