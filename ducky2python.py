@@ -68,7 +68,8 @@ for line in duckyScript:
 		
 	# Check if the statement is a string
 	elif line[0:6] == "STRING" :
-		previousStatement = "pyautogui.typewrite(\"" + line[7:] + "\", interval=0.02)"
+		escapeDoubleQuotes = line[7:].replace('"', '\\"')
+		previousStatement = "pyautogui.typewrite(\"" + escapeDoubleQuotes + "\", interval=0.02)"
 	
 	# Check if the statement is a repeat command - in which case write the previous command times-1 since
 	# we write it once more at the end of the for loop anyways
@@ -98,4 +99,4 @@ for line in duckyScript:
 
 # Close output file before exiting
 pythonScript.close()	
-input("\nConversion complete!\n\nPress any key to close.")
+input("\nConversion complete!\n\nPress the enter/return key to close.")
